@@ -47,4 +47,5 @@ Mamy bardzo niezrównoważone dane (inbalancy).Potrzebuje więcej czasu na inży
 ## Proof of cluster clean up
 **If you did not delete your compute cluster in the code, please complete this section. Otherwise, delete this section.**
 **Image of cluster marked for deletion**
-![zamykanie computing clustering] (Zrzut ekranu (94).png)
+
+![zamykanie computing clustering](Zrzut ekranu (94).png)
