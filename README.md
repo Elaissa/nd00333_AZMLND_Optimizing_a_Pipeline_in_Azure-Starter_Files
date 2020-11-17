@@ -48,4 +48,4 @@ Mamy bardzo niezrównoważone dane (inbalancy).Potrzebuje więcej czasu na inży
 **If you did not delete your compute cluster in the code, please complete this section. Otherwise, delete this section.**
 **Image of cluster marked for deletion**
 
-![zamykanie computing clustering](Zrzut ekranu (94).png)
+![zamykanie computing clustering](https://raw.githubusercontent.com/Elaissa/nd00333_AZMLND_Optimizing_a_Pipeline_in_Azure-Starter_Files/master/Zrzut%20ekranu%20(94).png)
