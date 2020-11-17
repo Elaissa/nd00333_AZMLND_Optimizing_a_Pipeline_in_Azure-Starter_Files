@@ -39,8 +39,10 @@ W pierwszym przypadku użycie hyperdrive dotyczy jednego modelu z różnymi para
 Najlepszym modelem w hyperdrive jest aalgorytm klasyfikacyjny Logistic Regressor z następującymi parametrami C= 0.57, max_iter= 150 i accuracy= 91.1%.
 AutoML przy algorytmie VotingAssambe z accuracy na poziomie 91.9%.
 
+
 ## Future work
 **What are some areas of improvement for future experiments? Why might these improvements help the model?**
+Mamy bardzo niezrównoważone dane (inbalancy).Potrzebuje więcej czasu na inżynierię cech (feature engineering).
 
 ## Proof of cluster clean up
 **If you did not delete your compute cluster in the code, please complete this section. Otherwise, delete this section.**
