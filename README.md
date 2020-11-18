@@ -64,7 +64,7 @@ Mamy bardzo niezrównoważone dane (inbalancy).Potrzebuje więcej czasu na inży
 
 Presently, I have not spent much time on data cleansing and feature engineering. I think the two can be explored to generate better results. Also as mentioned by Hyperdrive, the data is highly imbalanced, so strategies to deal with class imbalance should be done as well.
 
-Proof of cluster clean up If you did not delete your compute cluster in the code, please complete this section. Otherwise, delete this section. Image of cluster marked for deletion
+Proof of cluster clean up If you did not delete your compute cluster in the code, please complete this section. Otherwise, delete this section. Image of cluster marked for deletion.
 
 ## Proof of cluster clean up
 **If you did not delete your compute cluster in the code, please complete this section. Otherwise, delete this section.**
