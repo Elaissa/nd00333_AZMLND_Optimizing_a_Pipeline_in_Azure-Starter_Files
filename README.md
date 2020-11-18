@@ -6,7 +6,8 @@ In this project, we build and optimize an Azure ML pipeline using the Python SDK
 This model is then compared to an Azure AutoML run.
 
 ## Summary
-**In 1-2 sentences, explain the problem statement: e.g** Pracujemy nad zbiorem danych UCI Bank Marketing z http://archive.ics.uci.edu/ml/datasets/Bank+Marketing celem jest przewidywanie jak kient banku korzysta z zareklamowanych usług banku.   "This dataset contains data. about... we seek to predict..."
+**In 1-2 sentences, explain the problem statement: e.g** Pracujemy nad zbiorem danych UCI Bank Marketing z http://archive.ics.uci.edu/ml/datasets/Bank+Marketinghttp://archive.ics.uci.edu/ml/datasets/Bank+Marketing celem jest przewidywanie jak kient banku korzysta z zareklamowanych usług banku.   "This dataset contains data. about... we seek to predict..."
+We are working on the UCI Bank Marketing dataset. The dataset gives information about a marketing campaign of a bank. The aim is to predict how likely the customer are to subscribe to the product being advertised.
 
 **In 1-2 sentences, explain the solution: e.g.**
 Najlepszy model jest oparty o pipeline automl gdzie użyto algorytmu Voting Assamble, który ma accuracy Drugi algorytm to Logistic Regression z accuracy.... "The best performing model was a ..."
@@ -14,16 +15,27 @@ Najlepszy model jest oparty o pipeline automl gdzie użyto algorytmu Voting Assa
 ## Scikit-learn Pipeline
 **Explain the pipeline architecture, including data, hyperparameter tuning, and classification algorithm.**
 Użyłam  algorytmu klasyfikacyjnego biblioteki Scikit-learn. Wykonałam następujące działania w pliku train.py
-Użyłam klasy tabulardatasetfactory do załadowania zestawu danych UCI Bank Marketing. Użyłam funckcji cean_data w pliku train.py do czyszczenia, porządowania danych oraz ustaweinia etykiet danych (Label). 
-Użyłam metody train_test_split (aby podzielić wyczyszczone dane na próbę treningową i próbe testową). Następnie użyłam dwóch parametrów do algorytmu klasyfikacyjnego Logistic Regressionw w celu znalezenia najlepszych wartości dla poniższych parametrów: parametr C oznacza (inverse of regularization strength) okreslając tym mniejsze wartości zwiększą siłę regularyzacji.
+Użyłam klasy TabularDatasetFactory do załadowania zestawu danych UCI Bank Marketing. Użyłam funckcji cean_data w pliku train.py do czyszczenia, porządowania danych oraz ustaweinia etykiet danych (Label). 
+Użyłam metody train_test_split (aby podzielić wyczyszczone dane na próbę treningową i próbe testową). Następnie użyłam dwóch parametrów do algorytmu klasyfikacyjnego Logistic Regression w w celu znalezenia najlepszych wartości dla poniższych parametrów: parametr C oznacza (inverse of regularization strength) okreslając tym mniejsze wartości zwiększą siłę regularyzacji.
 Wybrałam ciągły zakres (uniform range) pomiędzy 0.5 i 0.9. Drugi parametr to max_iter czyli maksymalna liczba iteracji potrzebna do znalezienia optymalnego rozwiązania.
 Wybrałam trzy dyskretne wartości do przeszukania. Jako element zakonczenia obliczeń wybrałam BanditPolicy, który bazuje na czynnikach (factory) ilości obliczeń. 
 Określiłam czynnik obliczeń na 0.1 i ustawiłam parametr evaluation_interval na wartość 1 oraz parametr delay_evaluation na wartość 5.
+
+I used the Scikit-learn library classification algorithm. I did the following in the train.py file.
+I used the TabularDatasetFactory class to load the UCI Bank Marketing dataset. I used the cean_data function in the train.py file to clean up, order data and set up data labels (Label).
+I used the train_test_split method (to divide the cleared data into a training trial and a test trial). Then I used two parameters for the Logistic Regression classification algorithm in order to find the best values for the following parameters: parameter C means (inverse of regularization strength), specifying smaller values will increase the strength of regularization.
+I chose a uniform range between 0.5 and 0.9. The second parameter is max_iter, which is the maximum number of iterations needed to find the optimal solution.
+I chose three discrete values to search. As an element of finishing the calculations I chose BanditPolicy, which is based on the factors (factory) of the number of calculations.
+I set the calculation factor to 0.1 and set the evaluation_interval parameter to 1 and the delay_evaluation parameter to 5.
+
 
 
 **What are the benefits of the parameter sampler you chose?**
 Użyłam prókowania losowego (random sampler) do optymalizacji (hypertuning) próbka pozwala nam na wybór parametrów takich jak parametrów reguraryzacji i iterracji. 
 Wartości regularyzacji były ciągłe (C) i dyskretne (max_iter).
+
+I used random sampler to optimize (hypertuning) the sample allows us to select parameters such as regurarization and iteration parameters.
+Regularization values were continuous (C) and discrete (max_iter).
 
 **What are the benefits of the early stopping policy you chose?**
 BanditPolicy jest polityką używaną do zatrzymania optymalizacji powyższych hyperparametrów. Pozwala to zatrzymać proces kiedy występuje spadek wartości accuracy.
