@@ -7,7 +7,7 @@ This model is then compared to an Azure AutoML run.
 
 ## Summary
 **In 1-2 sentences, explain the problem statement: e.g** Pracujemy nad zbiorem danych UCI Bank Marketing z http://archive.ics.uci.edu/ml/datasets/Bank+Marketinghttp://archive.ics.uci.edu/ml/datasets/Bank+Marketing celem jest przewidywanie jak kient banku korzysta z zareklamowanych usług banku.   "This dataset contains data. about... we seek to predict..."
-We are working on the UCI Bank Marketing dataset. The dataset gives information about a marketing campaign of a bank. The aim is to predict how likely the customer are to subscribe to the product being advertised.
+We are working on the UCI Bank Marketing dataset http://archive.ics.uci.edu/ml/datasets/Bank+Marketing. The dataset gives information about a marketing campaign of a bank. The aim is to predict how likely the customer are to subscribe to the product being advertised.
 
 **In 1-2 sentences, explain the solution: e.g.**
 Najlepszy model jest oparty o pipeline AutoMl gdzie użyto algorytmu Voting Assamble, który ma accuracy Drugi algorytm to Logistic Regression z accuracy.... "The best performing model was a ..."
