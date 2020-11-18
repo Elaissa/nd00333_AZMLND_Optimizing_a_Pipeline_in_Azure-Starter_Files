@@ -13,9 +13,9 @@ Najlepszy model jest oparty o pipeline automl gdzie użyto algorytmu Voting Assa
 
 ## Scikit-learn Pipeline
 **Explain the pipeline architecture, including data, hyperparameter tuning, and classification algorithm.**
-Użyto algorytmu klasyfikacyjnego biblioteki Scikit-learn. Wykonano następujące działania w pliku train.py
-Użyto klasy tabulardatasetfactory do załadowania zestawu danych UCI Bank Marketing. Użyto funckcji cean_data w pliku train.py do czyszczenia, porządowania danych oraz ustaweinia etykiet danych (Label). 
-Użyto metody train_test_split (aby podzielić wyczyszczone dane na próbę treningową i próbe testową). Następnie użyłam dwóch parametrów do algorytmu klasyfikacyjnego Logistic Regressionw w celu znalezenia najlepszych wartości dla poniższych parametrów: parametr C oznacza (inverse of regularization strength) okreslając tym mniejsze wartości zwiększą siłę regularyzacji.
+Użyłam  algorytmu klasyfikacyjnego biblioteki Scikit-learn. Wykonałam następujące działania w pliku train.py
+Użyłam klasy tabulardatasetfactory do załadowania zestawu danych UCI Bank Marketing. Użyłam funckcji cean_data w pliku train.py do czyszczenia, porządowania danych oraz ustaweinia etykiet danych (Label). 
+Użyłam metody train_test_split (aby podzielić wyczyszczone dane na próbę treningową i próbe testową). Następnie użyłam dwóch parametrów do algorytmu klasyfikacyjnego Logistic Regressionw w celu znalezenia najlepszych wartości dla poniższych parametrów: parametr C oznacza (inverse of regularization strength) okreslając tym mniejsze wartości zwiększą siłę regularyzacji.
 Wybrałam ciągły zakres (uniform range) pomiędzy 0.5 i 0.9. Drugi parametr to max_iter czyli maksymalna liczba iteracji potrzebna do znalezienia optymalnego rozwiązania.
 Wybrałam trzy dyskretne wartości do przeszukania. Jako element zakonczenia obliczeń wybrałam BanditPolicy, który bazuje na czynnikach (factory) ilości obliczeń. 
 Określiłam czynnik obliczeń na 0.1 i ustawiłam parametr evaluation_interval na wartość 1 oraz parametr delay_evaluation na wartość 5.
