@@ -1,3 +1,4 @@
+
 from sklearn.linear_model import LogisticRegression
 import argparse
 import os
@@ -9,18 +10,11 @@ from sklearn.preprocessing import OneHotEncoder
 import pandas as pd
 from azureml.core.run import Run
 from azureml.data.dataset_factory import TabularDatasetFactory
+# import logging
 
 # TODO: Create TabularDataset using TabularDatasetFactory
 # Data is located at:
-# "https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv"
-
-ds = ### YOUR CODE HERE ###
-
-x, y = clean_data(ds)
-
-# TODO: Split data into train and test sets.
-
-### YOUR CODE HERE ###a
+url_data = "https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv"
 
 run = Run.get_context()
 
@@ -49,8 +43,19 @@ def clean_data(data):
     x_df["poutcome"] = x_df.poutcome.apply(lambda s: 1 if s == "success" else 0)
 
     y_df = x_df.pop("y").apply(lambda s: 1 if s == "yes" else 0)
+    return x_df, y_df
     
 
+    
+    
+ds = TabularDatasetFactory.from_delimited_files(url_data)
+x, y = clean_data(ds)
+
+# TODO: Split data into train and test sets.
+x_train, x_test, y_train, y_test = train_test_split(x, y)
+
+    
+    
 def main():
     # Add arguments to script
     parser = argparse.ArgumentParser()
