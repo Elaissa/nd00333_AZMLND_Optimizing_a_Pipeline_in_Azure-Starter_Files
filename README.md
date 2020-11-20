@@ -12,7 +12,7 @@ We are working on the UCI Bank Marketing dataset http://archive.ics.uci.edu/ml/d
 **In 1-2 sentences, explain the solution: e.g.**
 Najlepszy model jest oparty o pipeline AutoMl gdzie użyto algorytmu Voting Assamble, który ma accuracy Drugi algorytm to Logistic Regression z accuracy.... "The best performing model was a ..."
 
-The best performing model was based on the AutoMl pipeline where the Voting Assamble algorithm has been used, which has accuracy 91%,68 The second algorithm is Logistic Regression with accuracy....
+The best performing model was a based on the AutoMl pipeline where the Voting Assamble algorithm has been used, which has accuracy 91,68 %. The second algorithm is Logistic Regression with accuracy 91,18 %.
 
 ## Scikit-learn Pipeline
 **Explain the pipeline architecture, including data, hyperparameter tuning, and classification algorithm.**
@@ -52,10 +52,10 @@ BanditPolicy is used to stop the hyperparemeter tuning, it helps to stop the pro
 ## Pipeline comparison
 **Compare the two models and their performance. What are the differences in accuracy? In architecture? If there was a difference, why do you think there was one?**
 W pierwszym przypadku użycie hyperdrive dotyczy jednego modelu z różnymi parametrami ale AutoML działa na różnych modelach. Hyperdrive trzeba zbudować plik treningowy train.py, ale w AutoML potrzebujemy tylko przekazania danych i zdefiniowana zadania. AutoML jest łatwiejsze w użyciu praca z nim jest szybsza. Praca z hypierdrive jest dłuższa ze względu  na napisanie pliky trian.py.
-Najlepszym modelem w hyperdrive jest aalgorytm klasyfikacyjny Logistic Regressor z następującymi parametrami C= 0.57, max_iter= 150 i accuracy= 91.1%.
-AutoML przy algorytmie VotingAssambe z accuracy na poziomie 91.9%.
+Najlepszym modelem w hyperdrive jest aalgorytm klasyfikacyjny Logistic Regressor z następującymi parametrami C= 0.8626611368448052, max_iter= 150 i accuracy= 91,18%.
+AutoML przy algorytmie VotingAssambe z accuracy na poziomie 91,68 %.
 
-First in case of Hyperdrive only one model with different hyperparameters was searched, but AutoML worked with many other models as well. In Hyperdrive we have to build a training script, but in AutoML we just need to pass the data, and define the task. AutoML is easy to use, I got my AutoML working in first run, but for Hyperdrive, two days were spent. The best model using hyperdrive is LOgistic Regressor Classifier with C= 0.57, max_iter = 150, and accuracy = 91.4%. The AutoML gives us the best result for 91.9%.
+First in case of Hyperdrive only one model with different hyperparameters was searched, but AutoML worked with many other models as well. In Hyperdrive we have to build a training script, but in AutoML we just need to pass the data, and define the task. AutoML is easy to use, I got my AutoML working in first run, but for Hyperdrive, two days were spent. The best model using hyperdrive is LOgistic Regressor Classifier with C= 0.8626611368448052, max_iter = 150, and accuracy = 91,18%. The AutoML gives us the best result for accuracy 91,68 %.
 
 
 ## Future work
