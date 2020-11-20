@@ -12,7 +12,7 @@ We are working on the UCI Bank Marketing dataset http://archive.ics.uci.edu/ml/d
 **In 1-2 sentences, explain the solution: e.g.**
 Najlepszy model jest oparty o pipeline AutoMl gdzie użyto algorytmu Voting Assamble, który ma accuracy Drugi algorytm to Logistic Regression z accuracy.... "The best performing model was a ..."
 
-The best performing model was based on the AutoMl pipeline where the Voting Assamble algorithm has been used, which has accuracy.... The second algorithm is Logistic Regression with accuracy....
+The best performing model was based on the AutoMl pipeline where the Voting Assamble algorithm has been used, which has accuracy 91%,68 The second algorithm is Logistic Regression with accuracy....
 
 ## Scikit-learn Pipeline
 **Explain the pipeline architecture, including data, hyperparameter tuning, and classification algorithm.**
