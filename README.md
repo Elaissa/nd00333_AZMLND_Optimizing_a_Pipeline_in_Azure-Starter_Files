@@ -19,15 +19,15 @@ The best performing model was a based on the AutoMl pipeline where the Voting As
 Użyłam  algorytmu klasyfikacyjnego biblioteki Scikit-learn. Wykonałam następujące działania w pliku train.py
 Użyłam klasy TabularDatasetFactory do załadowania zestawu danych UCI Bank Marketing. Użyłam funckcji cean_data w pliku train.py do czyszczenia, porządowania danych oraz ustaweinia etykiet danych (Label). 
 Użyłam metody train_test_split (aby podzielić wyczyszczone dane na próbę treningową i próbe testową). Następnie użyłam dwóch parametrów do algorytmu klasyfikacyjnego Logistic Regression w w celu znalezenia najlepszych wartości dla poniższych parametrów: parametr C oznacza (inverse of regularization strength) okreslając tym mniejsze wartości zwiększą siłę regularyzacji.
-Wybrałam ciągły zakres (uniform range) pomiędzy 0.5 i 0.9. Drugi parametr to max_iter czyli maksymalna liczba iteracji potrzebna do znalezienia optymalnego rozwiązania.
-Wybrałam trzy dyskretne wartości do przeszukania. Jako element zakonczenia obliczeń wybrałam BanditPolicy, który bazuje na czynnikach (factory) ilości obliczeń. 
+Wybrałam ciągły zakres (uniform range) pomiędzy 0.5 i 1.0. Drugi parametr to max_iter czyli maksymalna liczba iteracji potrzebna do znalezienia optymalnego rozwiązania.
+Wybrałam trzy dyskretne wartości do przeszukania (100,150,200). Jako element zakończenia obliczeń wybrałam BanditPolicy, który bazuje na czynnikach (factory) ilości obliczeń. 
 Określiłam czynnik obliczeń na 0.1 i ustawiłam parametr evaluation_interval na wartość 1 oraz parametr delay_evaluation na wartość 5.
 
 I used the Scikit-learn library classification algorithm. I did the following in the train.py file.
 I used the TabularDatasetFactory class to load the UCI Bank Marketing dataset. I used the cean_data function in the train.py file to clean up, order data and set up data labels (Label).
 I used the train_test_split method (to divide the cleared data into a training trial and a test trial). Then I used two parameters for the Logistic Regression classification algorithm in order to find the best values for the following parameters: parameter C means (inverse of regularization strength), specifying smaller values will increase the strength of regularization.
-I chose a uniform range between 0.5 and 0.9. The second parameter is max_iter, which is the maximum number of iterations needed to find the optimal solution.
-I chose three discrete values to search. As an element of finishing the calculations I chose BanditPolicy, which is based on the factors (factory) of the number of calculations.
+I chose a uniform range between 0.5 and 1.0. The second parameter is max_iter, which is the maximum number of iterations needed to find the optimal solution.
+I chose three discrete values to search (100,150,200) As an element of finishing the calculations I chose BanditPolicy, which is based on the factors (factory) of the number of calculations.
 I set the calculation factor to 0.1 and set the evaluation_interval parameter to 1 and the delay_evaluation parameter to 5.
 
 
@@ -55,7 +55,7 @@ W pierwszym przypadku użycie hyperdrive dotyczy jednego modelu z różnymi para
 Najlepszym modelem w hyperdrive jest aalgorytm klasyfikacyjny Logistic Regressor z następującymi parametrami C= 0.8626611368448052, max_iter= 150 i accuracy= 91,18%.
 AutoML przy algorytmie VotingAssambe z accuracy na poziomie 91,68 %.
 
-First in case of Hyperdrive only one model with different hyperparameters was searched, but AutoML worked with many other models as well. In Hyperdrive we have to build a training script, but in AutoML we just need to pass the data, and define the task. AutoML is easy to use, I got my AutoML working in first run, but for Hyperdrive, two days were spent. The best model using hyperdrive is LOgistic Regressor Classifier with C= 0.8626611368448052, max_iter = 150, and accuracy = 91,18%. The AutoML gives us the best result for accuracy 91,68 %.
+First in case of Hyperdrive only one model with different hyperparameters was searched, but AutoML worked with many other models as well. In Hyperdrive we have to build a training script, but in AutoML we just need to pass the data, and define the task. AutoML is easy to use, I got my AutoML working in first run, but for Hyperdrive, two days were spent. The best model using hyperdrive is Logistic Regressor Classifier with C= 0.8626611368448052, max_iter = 150, and accuracy = 91,18%. The AutoML gives us the best result for accuracy 91,68 %.
 
 
 ## Future work
