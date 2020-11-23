@@ -52,27 +52,27 @@ BanditPolicy is used to stop the hyperparemeter tuning, it helps to stop the pro
  ![AutoML pipelines](https://raw.githubusercontent.com/Elaissa/nd00333_AZMLND_Optimizing_a_Pipeline_in_Azure-Starter_Files/master/126609277_705647490071917_7526884009977243710_n.png)
 
 Best metrics for best run:
-'recall_score_micro': 0.9168422566837012
-'AUC_micro': 0.9807531790332995
-'balanced_accuracy': 0.7691801589800142
-'precision_score_weighted': 0.9134645656110083
-'average_precision_score_macro': 0.825936109718057
-'average_precision_score_weighted': 0.9556557073465155
-'norm_macro_recall': 0.5383603179600286
-'log_loss': 0.19512529378426277
-'accuracy': 0.9168422566837012
-'f1_score_weighted': 0.9149048337603236
-'precision_score_macro': 0.7956342687881034
-'recall_score_macro': 0.7691801589800142
-'matthews_correlation': 0.5641407990567678
-'AUC_macro': 0.9476178211367252
-'f1_score_micro': 0.9168422566837012
-'f1_score_macro': 0.7814489359423009
-'precision_score_micro': 0.9168422566837012
-'recall_score_weighted': 0.9168422566837012
-'AUC_weighted': 0.9476178211367252
-'average_precision_score_micro': 0.9814910047870911
-'weighted_accuracy': 0.9535524319320908,
+* 'recall_score_micro': 0.9168422566837012
+* 'AUC_micro': 0.9807531790332995
+* 'balanced_accuracy': 0.7691801589800142
+* 'precision_score_weighted': 0.9134645656110083
+* 'average_precision_score_macro': 0.825936109718057
+* 'average_precision_score_weighted': 0.9556557073465155
+* 'norm_macro_recall': 0.5383603179600286
+* 'log_loss': 0.19512529378426277
+* 'accuracy': 0.9168422566837012
+* 'f1_score_weighted': 0.9149048337603236
+* 'precision_score_macro': 0.7956342687881034
+* 'recall_score_macro': 0.7691801589800142
+* 'matthews_correlation': 0.5641407990567678
+* 'AUC_macro': 0.9476178211367252
+* 'f1_score_micro': 0.9168422566837012
+* 'f1_score_macro': 0.7814489359423009
+* 'precision_score_micro': 0.9168422566837012
+* 'recall_score_weighted': 0.9168422566837012
+* 'AUC_weighted': 0.9476178211367252
+* 'average_precision_score_micro': 0.9814910047870911
+* 'weighted_accuracy': 0.9535524319320908,
 
 ## Pipeline comparison
 **Compare the two models and their performance. What are the differences in accuracy? In architecture? If there was a difference, why do you think there was one?**
