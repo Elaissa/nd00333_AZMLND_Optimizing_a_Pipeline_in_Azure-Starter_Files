@@ -87,7 +87,12 @@ First in case of Hyperdrive only one model with different hyperparameters was se
 **What are some areas of improvement for future experiments? Why might these improvements help the model?**
 Mamy bardzo niezrównoważone dane (inbalancy).Potrzebuje więcej czasu na inżynierię cech (feature engineering).
 
-Presently, I have not spent much time on data cleansing and feature engineering. I think the two can be explored to generate better results. Also as mentioned by Hyperdrive, the data is highly imbalanced, so strategies to deal with class imbalance should be done as well.
+Presently, I have not spent much time on data cleansing and feature engineering. I think the two can be explored to generate better results. Also as mentioned by Hyperdrive, the data is highly imbalanced, so strategies to deal with class imbalance should be done as well. In this case, other alternative evaluation metrics can be applied such as:
+* Precision/Specificity: how many selected instances are relevant.
+* Recall/Sensitivity: how many relevant instances are selected.
+* F1 score: harmonic mean of precision and recall.
+* MCC: correlation coefficient between the observed and predicted binary classifications.
+* AUC: relation between true-positive rate and false positive rate.
 
 Proof of cluster clean up If you did not delete your compute cluster in the code, please complete this section. Otherwise, delete this section. Image of cluster marked for deletion.
 
