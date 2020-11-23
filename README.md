@@ -48,6 +48,8 @@ BanditPolicy is used to stop the hyperparemeter tuning, it helps to stop the pro
  Dla procedury AutoML kroki pierwsze są podobne jak w popszednim pipeline: czyszczenie danych, dzielenie danych, zestaw treningowy i testowy. Następnym waznym krokiem jest ustawienie konfiguracji dla AutoML gdzie accuracy jest podstawą metryką (primary metric).Użyłam krzyżowej walidacji (cross valitation) aby uniknąć przeuczenia (everlifting).
  
  For AutoML procedure the first intial steps were same in data pipeline: Clear data Split data to train test dataset. Next we created a config for AutoML, with accuracy as our primary metric. We also decided for cross validation to take care of any overfitting.
+ 
+ ![AutoML pipelines](https://raw.githubusercontent.com/Elaissa/nd00333_AZMLND_Optimizing_a_Pipeline_in_Azure-Starter_Files/master/126609277_705647490071917_7526884009977243710_n.png)
 
 ## Pipeline comparison
 **Compare the two models and their performance. What are the differences in accuracy? In architecture? If there was a difference, why do you think there was one?**
